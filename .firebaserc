@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crud-5cd2c": {
+      "hosting": {
+        "crud-firebase": [
+          "crud-5cd2c"
+        ]
+      }
+    }
+  }
+}

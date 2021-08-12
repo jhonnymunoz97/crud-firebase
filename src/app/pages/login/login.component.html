@@ -1,0 +1,33 @@
+<div style="margin:auto;">
+    <form action="">
+        <label class="form-label"> <b>AUTENTICACIÓN DE USUARIO</b></label>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">User</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput2">
+        </div>
+    </form>
+
+
+    <button (click)='addEmpleado()' >Añadir Empledo</button>
+
+
+    <table style="margin: auto;">
+        <tr>
+            <th style="padding: 15px;">Id</th>
+            <th style="padding: 15px;">User</th>
+            <th style="padding: 15px;">Password</th>
+            <th colspan="2" style="text-align: center;padding: 15px;">Acciones</th>
+        </tr>
+        <tr *ngFor="let item of data">
+            <td style="padding-left: 15px;">{{item.id}}</td>
+            <td style="padding-left: 15px;">{{item.user}}</td>
+            <td style="padding-left: 15px;">{{item.password}}</td>
+            <td style="padding-left: 15px;"><button (click)="editEmpleado(item.id)">Editar</button></td>
+            <td style="padding-left: 15px;"><button (click)="deleteEmpleado(item.id)">Eliminar</button></td>
+        </tr>
+    </table>
+</div>
